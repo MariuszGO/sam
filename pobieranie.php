@@ -21,10 +21,13 @@ echo "<a href='wysylanie.html'>Formularz wysyłania</a>";
 //zamiana otrzymanego wyniku na tablicę przy użyciu funkcji mysqli_fetch_array oraz wyświetalanie
 //danych w pętli
 
+//Początek tabeli, zawsze musi być otwarta przed pętlą
+//<th> używane są do nadania tytułu kolumny
 echo "<table>";
 echo "<tr> <th>Marka</th> <th>Model</th> <th>Cena</th> </tr>";
 while($tablica = mysqli_fetch_array($wynik)){
 
+//przypisanie zmiennej tablowej do zmienych marka, model, cena. Tak aby było łatwiej użyć ich podczas wyświetlania
 $marka = $tablica['marka'];
 $model = $tablica['model'];
 $cena = $tablica['cena'];
@@ -35,6 +38,7 @@ echo "<tr><td> $marka  </td> <td>  $model </td> <td> $cena </td> </tr> ";
 
  }
 
+ //koniec tabeli
  echo "</table>";
 
 
