@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Zawsze dajemy pl-PL zamiast en -->
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stona o samochodach</title>
 </head>
 <body>
+    <!-- Początek formularza -->
     <form action="wysylanie.php" method="GET">
+        <!-- Label jest połączony z polem input poprzez id. Musimy dać to samo po for w label co po id w input.-->
         <label for="m">Marka: </label>
-        <input type="text" name="marka" id="m">
+        <input type="text" name="marka" id="m"><br>
+
+        <!-- Input jest wewnątrz label-->
+        <label>Model: <input type="text" name="model"></label><br>
+        <label>Cena: <input type="number" name="cena"</label><br>
+        
         <button>Wyślij</button>
+
+    </form>
+    <!--Koniec formularza-->
+
+
 
 </body>
 </html>

@@ -28,3 +28,11 @@
 
 
  mysqli_close($conn);
+
+
+ $dane = "ADAM";
+ $dane1 = "KOWAL";
+
+
+ echo "Moje imie to: " . $dane . " a nazwisko to: " . $dane1;
+
