@@ -21,7 +21,7 @@ echo "<a href='wysylanie.html'>Formularz wysyłania</a>";
 //zamiana otrzymanego wyniku na tablicę przy użyciu funkcji mysqli_fetch_array oraz wyświetalanie
 //danych w pętli
 
-echo "<table border='2'>";
+echo "<table>";
 echo "<tr> <th>Marka</th> <th>Model</th> <th>Cena</th> </tr>";
 while($tablica = mysqli_fetch_array($wynik)){
 
