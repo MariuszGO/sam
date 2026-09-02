@@ -15,7 +15,7 @@ $cena = $_GET['cena'];
 
  mysqli_close($conn);
  
-
+echo "<a href='pobieranie.php'>Wyświetl Dane</a>";
 
 
 

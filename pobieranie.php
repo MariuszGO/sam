@@ -1,5 +1,5 @@
 <?php
-
+echo "<a href='wysylanie.html'>Formularz wysyłania</a>";
 
 //Przygotowanie połączenia
 //Używamy funkcji mysqli_connect(nazwa_hosta, nazwa_użytkownika, hasło, nazwa bazy danych)
@@ -20,11 +20,22 @@
 
 //zamiana otrzymanego wyniku na tablicę przy użyciu funkcji mysqli_fetch_array oraz wyświetalanie
 //danych w pętli
- while($tablica = mysqli_fetch_array($wynik)){
 
- echo $tablica['marka']. " ";
- echo $tablica['model']. "<br>";
+echo "<table border='2'>";
+echo "<tr> <th>Marka</th> <th>Model</th> <th>Cena</th> </tr>";
+while($tablica = mysqli_fetch_array($wynik)){
+
+$marka = $tablica['marka'];
+$model = $tablica['model'];
+$cena = $tablica['cena'];
+
+echo "<tr><td> $marka  </td> <td>  $model </td> <td> $cena </td> </tr> ";
+//echo "<tr><td>" . $tablica['marka'] . "  </td> <td>" .  $tablica['model'] . " </td> <td>" . $tablica['cena'] ." </td> </tr> ";
+
+
  }
+
+ echo "</table>";
 
 
  mysqli_close($conn);
